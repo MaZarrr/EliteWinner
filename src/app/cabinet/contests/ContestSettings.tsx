@@ -296,7 +296,7 @@ export default function ContestSettings() {
               { post  && <div className='mb-2 relative'>
                 <h3>Выбранный пост</h3>
                 <span className='flex'>
-                  <img width={450} height={450} src={post.image.url} alt="Выбранный пост" />
+                  <img width={450} height={450} src={post.image?.url} alt="Выбранный пост" />
                 <div className='bg-slate-50 mb-2 ml-3'>
                   <span>{post.text.slice(0, 350)}...</span>
                 </div>

@@ -203,8 +203,6 @@ export const apiSlie = createSlice({
             }>) => {
 
             const settings = state.conditions_contest[payload.contest_type][payload.conditions_type]
-            console.log("settings___", settings);
-            console.log("settings___payload", payload);
             
             if (payload.contest_type === 'vk_settings') {
                 state.conditions_contest[payload.contest_type][payload.conditions_type] = settings.map(item => {
@@ -229,7 +227,7 @@ export const apiSlie = createSlice({
 
             const settings = state.conditions_contest[payload.contest_type][payload.type_conditions]
             
-            if (payload.contest_type === 'vk_settings') { // тип менятется динамически ???!!!
+            if (payload.contest_type === 'vk_settings') { // тип менятется динамически
                 state.conditions_contest[payload.contest_type][payload.type_conditions] = settings.map((item: any) => {
                         if(item.isInput) {
                             return {
